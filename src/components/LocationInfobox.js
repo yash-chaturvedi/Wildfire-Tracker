@@ -1,7 +1,7 @@
 
-const LocationInfobox = ({info}) => {
+const LocationInfobox = ({info , onClick}) => {
     return (
-        <div className="location-info">
+        <div className="location-info" onClick={onClick}>
             <h2>Event Location Info</h2>
             <ul>
                 <li>ID : <strong>{info.id}</strong></li>

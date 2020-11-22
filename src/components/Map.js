@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Map.css'
 import GoogleMapReact from 'google-map-react'
 import LocationMarker from './LocationMarker'
 import LocationInfobox from './LocationInfobox'
@@ -29,7 +28,7 @@ const Map = ({eventData , center , zoom}) => {
             >
                 {markers}
             </GoogleMapReact>
-            {locationInfo && <LocationInfobox info={locationInfo} /> }
+            {locationInfo && <LocationInfobox info={locationInfo} onClick = {() => setLocationInfo(null)} /> }
         </div>
     )
 }
